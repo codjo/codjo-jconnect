@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+     | POM Relationships
+     -->
+
+    <parent>
+        <groupId>net.codjo.pom</groupId>
+        <artifactId>codjo-pom-library</artifactId>
+        <version>SNAPSHOT</version>
+    </parent>
+    <groupId>net.codjo.jconnect</groupId>
+    <artifactId>codjo-jconnect</artifactId>
+    <version>1.6-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.sybase.jdbc</groupId>
+            <artifactId>jconnect</artifactId>
+            <version>6.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>net.codjo.test</groupId>
+            <artifactId>codjo-test-common</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--
+    | Project Information
+    -->
+
+    <name>Lib &gt; mockant jconnect 5.2</name>
+    <inceptionYear>2009</inceptionYear>
+
+    <!--
+    | Environment Information
+    -->
+
+    <scm>
+        <connection>scm:git:https://github.com/codjo/codjo-jconnect.git</connection>
+        <developerConnection>scm:git:https://github.com/codjo/codjo-jconnect.git</developerConnection>
+        <url>https://github.com/codjo/codjo-jconnect</url>
+    </scm>
+
+</project>

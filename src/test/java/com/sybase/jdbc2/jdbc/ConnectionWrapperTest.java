@@ -11,13 +11,13 @@ import static org.junit.Assert.assertTrue;
 
 public class ConnectionWrapperTest {
     private ConnectionMock connectionMock;
-    private Connection stub;
+    private Connection connection;
     private ConnectionWrapper wrapper;
 
 
     @Test
     public void test_connectionWrapper() throws Exception {
-        stub.commit();
+        connection.commit();
         assertEquals("commit()", connectionMock.callList());
     }
 
@@ -32,8 +32,8 @@ public class ConnectionWrapperTest {
     @Before
     public void setup() {
         connectionMock = new ConnectionMock();
-        stub = connectionMock.getStub();
-        wrapper = new ConnectionWrapper(stub);
-        assertSame(stub, wrapper.getConnection());
+        connection = connectionMock.getStub();
+        wrapper = new ConnectionWrapper(connection);
+        assertSame(connection, wrapper.getConnection());
     }
 }

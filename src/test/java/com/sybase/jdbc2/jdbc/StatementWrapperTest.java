@@ -17,7 +17,7 @@ public class StatementWrapperTest {
     @Test
     public void test_statementWrapper() throws Exception {
         StatementMock mock = new StatementMock();
-        StatementWrapper wrapper = new StatementWrapper(mock);
+        StatementWrapper wrapper = new StatementWrapper(mock.getStub());
 
         wrapper.execute("request");
 
@@ -52,6 +52,6 @@ public class StatementWrapperTest {
     private StatementWrapper createStatement(ResultSet resultSet) {
         CallableStatementMock mock = new CallableStatementMock();
         mock.mockResultSet(resultSet);
-        return new StatementWrapper(mock);
+        return new StatementWrapper(mock.getStub());
     }
 }

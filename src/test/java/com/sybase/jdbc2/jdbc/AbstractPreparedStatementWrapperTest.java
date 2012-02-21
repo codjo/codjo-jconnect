@@ -46,6 +46,6 @@ public class AbstractPreparedStatementWrapperTest {
     private AbstractPreparedStatementWrapper createPrepareStatement(ResultSet resultSet) {
         CallableStatementMock mock = new CallableStatementMock();
         mock.mockResultSet(resultSet);
-        return new AbstractPreparedStatementWrapper(mock);
+        return new AbstractPreparedStatementWrapper(mock.getStub());
     }
 }
